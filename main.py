@@ -4,7 +4,7 @@ import numpy as np
 import time
 import random
 
-class ConnectFoutGUI:
+class ConnectFourGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Connect Four")
@@ -136,7 +136,7 @@ class ConnectFoutGUI:
             self.message.set("Player 1 (Red) it is your turn")
         elif self.current_player == 2:
             self.status_label.config(fg="yellow")
-            self.message.set("Bot (Yellow) it is yout turn")
+            self.message.set("Bot (Yellow) it is your turn")
             self.root.after(1000, self.bot)
 
     def bot(self):
@@ -224,6 +224,6 @@ class ConnectFoutGUI:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = ConnectFoutGUI(root)
+    app = ConnectFourGUI(root)
     print("Game Started")
     root.mainloop()
